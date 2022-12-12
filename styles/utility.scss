@@ -1,0 +1,18 @@
+@mixin displayCenter($aline-items, $justify-content) {
+  display: flex;
+  align-items: $aline-items;
+  justify-content: $justify-content;
+}
+
+@mixin border($width, $color) {
+  border: $width solid $color;
+}
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xlg: 1200px;
+
+$brand_color: #e11d2f;
+$second_brand: #ffffff;
+$third_brand: #8a8f9a;

@@ -1,0 +1,101 @@
+.header_wrapper {
+  position: relative;
+  max-width: 1320px;
+  margin: auto;
+  @include displayCenter(center, space-between);
+  color: #ffff;
+  .header_left {
+    color: $brand_color;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    span {
+      color: #ffff;
+      font-size: 30px;
+    }
+  }
+  .header_middle {
+    // position: relative;
+    @include displayCenter(center, space-between);
+    .text {
+      margin-left: 30px;
+    }
+  }
+  .discover_wrapper {
+    display: none;
+  }
+  .header_right {
+    @include displayCenter(center, space-between);
+    a {
+      text-decoration: none;
+      color: #ffff;
+    }
+    .sign_up {
+      margin-left: 30px;
+      border: none;
+      background-color: $brand_color;
+      color: #ffff;
+      padding: 8px 15px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+  }
+  .menu {
+    font-size: 25px;
+    display: none;
+    cursor: pointer;
+  }
+  .close {
+    cursor: pointer;
+    font-size: 25px;
+    display: none;
+    z-index: 1;
+  }
+}
+
+.navBar {
+  display: block !important;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 250px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: $brand_color;
+  font-size: large;
+  font-weight: 400;
+  padding: 40px 0;
+  .text {
+    padding: 10px 20px;
+    // margin-right: 30px;
+    &:hover {
+      background-color: black;
+    }
+  }
+}
+
+.discover {
+  position: absolute;
+  top: 35px;
+  left: 370px;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .header_wrapper {
+    .header_middle {
+      display: none;
+    }
+    .menu {
+      display: block;
+    }
+    .discover {
+      position: absolute;
+      top: 85px;
+      left: 60px;
+      z-index: 1;
+    }
+  }
+}

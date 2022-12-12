@@ -1,0 +1,75 @@
+.wallet_container {
+  margin-bottom: 80px;
+  .wallet_wrapper {
+    margin-top: 1px;
+    background-color: #ffff;
+    color: black;
+    @include displayCenter(center, space-between);
+    width: 500px;
+    height: 60px;
+    padding: 0px 20px;
+    border-radius: 5px;
+    &:hover {
+      box-shadow: inset 60px 0 120px rgb(80, 18, 80),
+        inset -60px 0 120px rgb(16, 80, 80);
+      color: #ffff;
+    }
+    .wallet_left {
+      @include displayCenter(center, center);
+      .wallet_img {
+        position: relative;
+        height: 40px;
+        width: 40px;
+      }
+      .wallet_name {
+        font-size: 18px;
+        font-weight: 600;
+        margin-left: 20px;
+      }
+    }
+    .wallet_btn {
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        border: none;
+        background-color: rgb(32, 129, 226);
+        color: #ffff;
+        border-radius: 10px;
+      }
+    }
+    .second_btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border: none;
+      background-color: rgb(165, 160, 160);
+      color: #ffff;
+      border-radius: 10px;
+    }
+  }
+
+  .s_more {
+    background-color: #ffff;
+    color: rgb(32, 129, 226);
+    @include displayCenter(center, center);
+    width: 500px;
+    height: 60px;
+    padding: 0 20px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 1px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wallet_container {
+    .wallet_wrapper {
+      width: 380px;
+      height: 60px;
+      @include displayCenter(center, space-between);
+    }
+    .s_more {
+      width: 380px;
+    }
+  }
+}

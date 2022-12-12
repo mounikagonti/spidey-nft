@@ -1,0 +1,75 @@
+.collections_wrapper {
+  max-width: 1320px;
+  margin: auto;
+  color: #ffff;
+  margin-top: 50px;
+  // padding: 0 20px;
+
+  .array_wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    margin-left: 8px;
+    // padding: 0px 20px;
+    .nft_wrapper {
+      background-color: #ffff;
+      width: 430px;
+      height: 350px;
+      border-radius: 15px;
+      .nft_top {
+        .nftImg {
+          position: relative;
+          width: 430px;
+          height: 250px;
+        }
+      }
+      .nft_bottom {
+        position: relative;
+        @include displayCenter(center, center);
+
+        .nft_left {
+          background-color: #ffff;
+          width: 90px;
+          height: 90px;
+          position: absolute;
+          top: -10px;
+          left: 20px;
+          border-radius: 10px;
+          @include displayCenter(center, center);
+          .nftImgTow {
+            position: relative;
+            width: 80px;
+            height: 80px;
+          }
+        }
+        .nft_right {
+          color: black;
+          margin-top: 30px;
+          margin-right: 60px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .collections_wrapper {
+    .array_wrapper {
+      .nft_wrapper {
+        // background-color: #ffff;
+        width: 380px;
+        height: 350px;
+        // border-radius: 15px;
+        .nft_top {
+          .nftImg {
+            // position: relative;
+            width: 380px;
+            height: 250px;
+          }
+        }
+      }
+    }
+  }
+}

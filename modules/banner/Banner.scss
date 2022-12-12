@@ -1,0 +1,214 @@
+.banner_wrapper {
+  max-width: 1320px;
+  margin: auto;
+  margin-top: 80px;
+  color: #ffff;
+  @include displayCenter(center, space-between);
+  .banner_left {
+    .bold_text {
+      font-size: 35px;
+      font-weight: 600;
+      max-width: 270px;
+      span {
+        color: $brand_color;
+      }
+    }
+    .normal_text {
+      color: $third_brand;
+      margin-top: 30px;
+    }
+    .btn_wrapper {
+      position: relative;
+      margin-top: 50px;
+      @include displayCenter(center, flex-start);
+      .btn {
+        padding: 10px 25px;
+        border-radius: 8px;
+      }
+      .explore {
+        background-color: $brand_color;
+        text-decoration: none;
+        color: #ffff;
+      }
+      .create {
+        margin-left: 30px;
+        @include border(1px, $third_brand);
+      }
+      .model_container {
+        position: fixed;
+        top: 10%;
+        left: 30%;
+      }
+    }
+    .header_left_bottom_wrapper {
+      @include displayCenter(center, space-between);
+      margin-top: 80px;
+      .collection_wrapper {
+        .number {
+          font-size: 25px;
+          font-weight: 400;
+        }
+        .small_text {
+          color: $third_brand;
+          font-size: small;
+          margin-top: 10px;
+        }
+      }
+    }
+    .bannerBottom_wrapper {
+      @include displayCenter(center, flex-start);
+      margin-top: 80px;
+      .icon {
+        color: gold;
+      }
+      .bannerBottomText {
+        margin-left: 10px;
+        font-size: 12px;
+      }
+    }
+  }
+  .banner_right {
+    position: relative;
+    .banner_right_top {
+      width: 300px;
+      height: 80px;
+      @include displayCenter(center, space-between);
+      padding: 10px 15px;
+      /* From https://css.glass */
+      background: rgba(249, 246, 246, 0.21);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(3.3px);
+      -webkit-backdrop-filter: blur(3.3px);
+      border: 1px solid rgba(249, 246, 246, 0.33);
+      .img {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        @include border(3px, #ffff);
+      }
+      .Two {
+        margin-left: -15px;
+      }
+      .Three {
+        margin-left: -15px;
+      }
+      .bid_text {
+        margin-left: 10px;
+        color: $third_brand;
+      }
+    }
+    .unicorn_wrapper {
+      position: absolute;
+      left: 150px;
+      margin-top: 150px;
+      z-index: 1;
+      width: 50px;
+      height: 50px;
+      transform: rotate(-8.2deg);
+      background: rgba(249, 246, 246, 0.21);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(3.3px);
+      -webkit-backdrop-filter: blur(3.3px);
+      border: 1px solid rgba(249, 246, 246, 0.33);
+      @include displayCenter(center, center);
+      .unicorn {
+        position: relative;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .banner_right_bottom {
+      margin-top: 180px;
+      width: 300px;
+      height: 270px;
+      background: rgba(249, 246, 246, 0.21);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(3.3px);
+      -webkit-backdrop-filter: blur(3.3px);
+      border: 1px solid rgba(249, 246, 246, 0.33);
+      .spidey_text {
+        margin-top: 30px;
+        margin-left: 20px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .currentBid_wrapper {
+        @include displayCenter(center, space-between);
+        background-color: #334c4c65;
+        margin: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        .bidLeft {
+          .smallText {
+            color: $third_brand;
+            font-size: small;
+          }
+          .ethereum {
+            @include displayCenter(center, flex-start);
+            margin-top: 10px;
+            font-size: 20px;
+            .eth {
+              @include displayCenter(center, center);
+            }
+            .num {
+              margin-left: 5px;
+            }
+          }
+        }
+        .bidRight {
+          .diamond {
+            @include displayCenter(center, flex-start);
+            .diam {
+              @include displayCenter(center, center);
+              color: #5887e4;
+            }
+            .item {
+              margin-left: 10px;
+            }
+          }
+          .rate {
+            margin-top: 10px;
+            span {
+              color: $third_brand;
+            }
+          }
+        }
+      }
+      .btn {
+        padding: 5px 25px;
+        background-color: $brand_color;
+        text-align: center;
+        margin: 20px;
+        margin-top: 30px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .banner_left {
+    padding: 0 40px;
+  }
+  .banner_right {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .banner_wrapper {
+    .banner_left {
+      .btn_wrapper {
+        .model_container {
+          position: fixed;
+          top: 5%;
+          left: 10px;
+        }
+      }
+    }
+  }
+}

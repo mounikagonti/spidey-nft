@@ -1,0 +1,21 @@
+.login_wrapper {
+  @include displayCenter(center, center);
+  flex-direction: column;
+  color: #ffff;
+  margin-top: 50px;
+  p {
+    margin-top: 10px;
+    span {
+      color: $brand_color;
+    }
+  }
+  .wallet {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .login_wrapper {
+    padding: 0 20px;
+  }
+}
