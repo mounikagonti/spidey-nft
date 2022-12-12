@@ -64,12 +64,12 @@
 @media only screen and (max-width: 768px) {
   .wallet_container {
     .wallet_wrapper {
-      width: 380px;
+      width: 350px;
       height: 60px;
       @include displayCenter(center, space-between);
     }
     .s_more {
-      width: 380px;
+      width: 350px;
     }
   }
 }
